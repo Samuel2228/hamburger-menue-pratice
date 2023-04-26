@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.thugger{
+    height: 40px;
+    width: 40px;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+.thugger:checked ~ .menue-decon{
+    transform: rotate(45deg);
+}
+
+
+.thugger:checked ~ .menue-decon::before{
+    transform: rotate(45deg);
+    top: none;
+}
+
+
+.thugger:checked ~ .menue-decon::after{
+    transform: rotate(45deg);
+    top: none;
+}
+
+
+
+.menue-decon{
+    width: 40px;
+    border: 2px solid green;
+    background-color: black;
+    position: relative;
+    transition: 200ms ease;
+}
+
+
+.menue-icon{
+    width: 40px;
+    border: 2px solid red;
+    background-color: black;
+    position: relative;
+    transition: 200ms ease;
+}
+
+
+.thugger:checked ~ .menue-icon{
+    transform: rotate(45deg);
+}
+
+
